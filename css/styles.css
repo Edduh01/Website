@@ -246,6 +246,9 @@ Navbar
   cursor: pointer;
   justify-self: end;
 }
+.nav-btn:hover{
+  transform: scale(1.2);
+}
 
 @media screen and (min-width: 768px) {
   .nav {
@@ -259,7 +262,7 @@ Navbar
   .nav-links {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
+    justify-items: left;
     -moz-column-gap: 1rem;
     column-gap: 1rem;
     justify-self: end;
@@ -271,6 +274,8 @@ Navbar
     font-weight: bold;
     letter-spacing: var(--spacing);
     transition: var(--transition);
+    display: block;
+    cursor: pointer;
   }
 
   .nav-links a:hover {
@@ -309,9 +314,9 @@ Sidebar
   background: var(--clr-grey-10);
   z-index: 4;
   display: grid;
-  /* align-items: center;
-  justify-content: center; */
-  place-items: center;
+  align-items: left;
+  justify-content: left;
+  /* place-items: center; */
   transition: var(--transition);
   /* add later */
   transform: translateX(-100%);
@@ -323,7 +328,8 @@ Sidebar
 }
 
 .sidebar-links {
-  text-align: center;
+  text-align: left;
+  margin: 1rem;
 }
 
 .sidebar-links a {
@@ -337,7 +343,10 @@ Sidebar
 }
 
 .sidebar-links a:hover {
+  display: block;
   color: var(--clr-primary-5);
+  background: var(--clr-primary-8);
+  padding-left: 2.25rem;
 }
 
 .social-icons {
@@ -360,7 +369,7 @@ Sidebar
 
 .close-btn {
   position: absolute;
-  
+
   top: 1rem;
   right: 1rem;
   font-size: 3rem;
@@ -454,13 +463,13 @@ About
   text-align: left;
   margin-bottom: 2rem;
 }
-.about-title h2{
+.about-title h2 {
   text-align: left;
   /* margin-bottom: 2rem; */
   text-transform: uppercase;
   padding-right: 7rem;
 }
-.about-title h4{
+.about-title h4 {
   font-size: 1rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -481,7 +490,7 @@ About
   justify-self: center;
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   .about-center {
     grid-template-columns: 1fr 1fr;
   }
@@ -542,7 +551,7 @@ Services
   background: var(--clr-white);
 }
 
-@media screen and (min-width:676px) {
+@media screen and (min-width: 676px) {
   .services-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -551,7 +560,7 @@ Services
   }
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   .services-center {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -628,12 +637,12 @@ Projects
   opacity: 1;
   transform: scale(0.8);
 }
-.project:hover{
-  box-shadow:var(--dark-shadow);
-    transform: scale(1.02);
+.project:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
 }
 
-@media screen and (min-width:676px) {
+@media screen and (min-width: 676px) {
   .projects-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -642,13 +651,13 @@ Projects
   }
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
   .projects-center {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width:1170px) {
+@media screen and (min-width: 1170px) {
   .projects-center {
     grid-template-rows: 200px 200px;
     gap: 1rem;
@@ -736,29 +745,35 @@ Connect
   padding: 3rem 5rem 12rem 5rem;
   text-align: center;
 
-  -webkit-clip-path: polygon(0% 0%,
-      100% 0%,
-      100% 75%,
-      75% 75%,
-      75% 100%,
-      50% 75%,
-      0% 75%);
-  clip-path: polygon(0% 0%,
-      100% 0%,
-      100% 75%,
-      75% 75%,
-      75% 100%,
-      50% 75%,
-      0% 75%);
+  -webkit-clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
 }
 
 .connect {
-  -webkit-clip-path: polygon(50% 0%,
-      100% 10%,
-      100% 90%,
-      50% 100%,
-      0 90%,
-      0 10%);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 10%,
+    100% 90%,
+    50% 100%,
+    0 90%,
+    0 10%
+  );
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
 }
 
@@ -767,7 +782,7 @@ Connect
 Skills
 ===============
 */
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .skills-center {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1118,7 +1133,7 @@ Products Page
 .project-details {
   padding: 2rem 1.5rem;
 }
-.project-space{
+.project-space {
   margin-bottom: 0;
 }
 
@@ -1144,7 +1159,7 @@ Products Page
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 3rem 1rem;
 }
-li{
+li {
   color: var(--clr-primary-1);
 }
 
@@ -1251,36 +1266,3 @@ Atomic Gallery
     flex: 0 0 25%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
