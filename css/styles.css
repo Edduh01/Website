@@ -242,7 +242,7 @@ Navbar
   background: transparent;
   border-color: transparent;
   color: var(--clr-primary-5);
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   justify-self: end;
 }
@@ -289,6 +289,9 @@ Navbar
   }
 }
 
+
+
+
 /* fixed navbar */
 .navbar-fixed {
   position: fixed;
@@ -323,9 +326,21 @@ Sidebar
 }
 
 /* toggle sidebar */
+.nav-toggle {
+  background: transparent;
+  border: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+}
+
+.nav-toggle:hover {
+  transform: scale(1.2);
+}
 .show-sidebar {
   transform: translateX(0);
 }
+
 
 .sidebar-links {
   text-align: left;
@@ -333,7 +348,7 @@ Sidebar
 }
 
 .sidebar-links a {
-  font-size: 2rem;
+  font-size: 0.7rem;
   text-transform: capitalize;
   transition: var(--transition);
   color: var(--clr-grey-5);
@@ -723,7 +738,7 @@ Connect
   height: 100%;
   background: var(--clr-white);
   /* background: rgba(0, 0, 0, 0.6); */
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: -1;
 }
 
