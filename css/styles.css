@@ -754,6 +754,10 @@ Connect
 .video-text {
   max-width: 30rem;
 }
+.get-in-touch {
+  font-size: 0.5rem;
+}
+
 
 .video-banner {
   background: var(--clr-primary-10);
