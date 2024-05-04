@@ -246,7 +246,7 @@ Navbar
   cursor: pointer;
   justify-self: end;
 }
-.nav-btn:hover{
+.nav-btn:hover {
   transform: scale(1.2);
 }
 
@@ -289,9 +289,6 @@ Navbar
   }
 }
 
-
-
-
 /* fixed navbar */
 .navbar-fixed {
   position: fixed;
@@ -331,7 +328,6 @@ Sidebar
   border: transparent;
   font-size: 1.5rem;
   cursor: pointer;
-
 }
 
 .nav-toggle:hover {
@@ -340,7 +336,6 @@ Sidebar
 .show-sidebar {
   transform: translateX(0);
 }
-
 
 .sidebar-links {
   text-align: left;
@@ -757,7 +752,6 @@ Connect
 .get-in-touch {
   font-size: 0.5rem;
 }
-
 
 .video-banner {
   background: var(--clr-primary-10);
